@@ -39,7 +39,8 @@ function addGamesToPage(games) {
         // about each game
         gameCard.innerHTML = `<img src="${game.img}" class="game-img"></img>
                               <p><strong>${game.name}</strong></p>
-                              <p>${game.description}</p>`;
+                              <p>${game.description}</p>
+                              <p>Backers: ${game.backers}</p>`;
         
         // append the game to the games-container
         gamesContainer.appendChild(gameCard);
