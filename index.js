@@ -88,7 +88,6 @@ function filterUnfundedOnly() {
 
     // use filter() to get a list of games that have not yet met their goal
     const notReachedGoal = GAMES_JSON.filter((game) => game.pledged < game.goal);
-    console.log(notReachedGoal);
 
     // use the function we previously created to add the unfunded games to the DOM
     addGamesToPage(notReachedGoal);
@@ -100,7 +99,6 @@ function filterFundedOnly() {
 
     // use filter() to get a list of games that have met or exceeded their goal
     const reachedGoal = GAMES_JSON.filter((game) => game.pledged >= game.goal);
-    console.log("Reached goal: " + reachedGoal);
 
     // use the function we previously created to add unfunded games to the DOM
     addGamesToPage(reachedGoal);
@@ -167,3 +165,24 @@ firstGameContainer.append(firstGameElement);
 const secondGameElement = document.createElement("p")
 secondGameElement.innerHTML = secondGame.name;
 secondGameContainer.append(secondGameElement);
+
+/************************************************************************************
+ * Challenge 7: PART 2 - new functionality: search for a game by name 
+ */
+
+const searchField = document.getElementById("search-field");
+const searchButton = document.getElementById("search-button");
+
+// This function searches for a game based on the search field
+function searchForGame() {
+    deleteChildElements(gamesContainer);
+
+    // We get the value of the user text input and convert if to lower case, this implementation is case-insensitive 
+    const userText = searchField.value.toLowerCase();
+    const matchedGames = GAMES_JSON.filter((game) => game.name.toLowerCase().startsWith(userText));
+    console.log(matchedGames);
+
+    addGamesToPage(matchedGames);
+}
+// Add event listener to our search button
+searchButton.addEventListener("click", searchForGame);
