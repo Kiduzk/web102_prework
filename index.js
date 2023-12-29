@@ -180,7 +180,6 @@ function searchForGame() {
     // We get the value of the user text input and convert if to lower case, this implementation is case-insensitive 
     const userText = searchField.value.toLowerCase();
     const matchedGames = GAMES_JSON.filter((game) => game.name.toLowerCase().startsWith(userText));
-    console.log(matchedGames);
 
     addGamesToPage(matchedGames);
 }
