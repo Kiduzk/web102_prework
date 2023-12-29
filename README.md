@@ -25,7 +25,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/a/RJNukA7' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Kiduzk/web102_prework/blob/main/assets/KidusTegene-preworkWalkthrough.gif' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICEcap  
@@ -37,7 +37,8 @@ GIF created with LICEcap
 ## Notes
 
 Describe any challenges encountered while building the app.
-* 
+* Making sure that filter and reduce list methods worked properly
+* I also encountered challenges in understanding why we needed to delete all child elements, which caused some challenges in implementing the search functionality since the game cards just kept on adding without clearing the existing ones
 
 ## License
 
