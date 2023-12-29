@@ -89,10 +89,17 @@ button {
     margin-right: 50px;
     text-decoration: none;
     color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15%;
 }
 
 #search-field {
     height: 30px;
     border-radius: 5%;
     border: 2px solid #a8b0bc;
+}
+
+#search-button {
+    margin-left: 0px;
 }
